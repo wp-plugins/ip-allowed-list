@@ -109,8 +109,11 @@ foreach ($list as $key=>$val) {
 <form id="wlistContent" class="wlist" method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>">
   <?php wp_nonce_field('wlistContent') ?>
 <?php
-if (is_writable(WLIST_CONTENTFILE)) {
-	echo '<div class="warning"><p><strong>Warning: <code>blocked-content.htm</code> MUST be writable before you can make any changes to your content-file!</strong></p></div>';
+if (!is_writable(WLIST_CONTENTFILE)) {
+	echo '<div class="warning"><p><strong>Warning: <code>blocked-content.htm</code> is not writable.<br />
+									It MUST be writable before you can make any changes to your content file!</strong></p></div>';
+	echo '</form></div></div></div><!-- tab container wrap -->';
+	return;
 }
 $fileContent = file_get_contents(WLIST_CONTENTFILE);
 ?>
