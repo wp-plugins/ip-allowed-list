@@ -4,7 +4,7 @@ Donate link:	http://www.fergusweb.net/donate/
 Tags:			private, ip address, allowed, list, whitelist
 Tested up to:	2.8.6
 Requires at least:	2.5
-Stable tag:		1.0
+Stable tag:		1.0.1
 
 Limits access to the site to people on an allowed list of IP addresses.
 
@@ -39,6 +39,7 @@ Not yet.  Look for that in a future release.
 
 == Changelog ==
 
+= 1.01 =
+* Minor fix in definitions, improved is_writable error message.
 = 1.0 =
-
 * Initial release.  Provides core functionality to shut down your blog, allowing only people on the allowed list to see your site.
