@@ -56,8 +56,10 @@ function wlist_Admin_SettingsPage() {
 	if (isset($_POST['SaveListContent'])) {
 		if (!wp_verify_nonce($_POST['_wpnonce'], 'wlistContent')) { echo '<p class="alert">Invalid Security</p></div>'."\n"; return;	}
 		// Save HTML content
-		$content = stripslashes($_POST['ContentHTML']);
+		$content = stripslashes($_POST['newcontent']);
 		file_put_contents(WLIST_CONTENTFILE, $content);
+		//echo WLIST_CONTENTFILE.'<br /><br />'.$content;
+		//echo '<pre>'; print_r($_POST); echo '</pre>';
 		echo '<div id="message" class="updated fade"><p><strong>Changes to Blocked Content file saved.</strong></p></div>';
 	}
 	
@@ -106,7 +108,7 @@ foreach ($list as $key=>$val) {
   
   
   <div id="tabContent">
-<form id="wlistContent" class="wlist" method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>">
+<form id="template" class="wlist wlistContent" method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>#tabContent">
   <?php wp_nonce_field('wlistContent') ?>
 <?php
 if (!is_writable(WLIST_CONTENTFILE)) {
@@ -117,9 +119,13 @@ if (!is_writable(WLIST_CONTENTFILE)) {
 }
 $fileContent = file_get_contents(WLIST_CONTENTFILE);
 ?>
-  <textarea name="ContentHTML" id="ContentHTML" class="large-text codepress html" rows="25" cols="50"><?php echo $fileContent; ?></textarea>
+  <textarea name="newcontent" id="newcontent" class="large-text codepress html" rows="25" cols="50"><?php echo $fileContent; ?></textarea>
   <div class="save"><input type="submit" name="SaveListContent" value="Save Changes" id="Save" class="button-primary" /></div>
+  
 </form>
+
+
+        
   </div><!-- tab -->
 </div><!-- container -->
 <script type="text/javascript"><!--

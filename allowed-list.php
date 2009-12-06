@@ -3,7 +3,7 @@
 Plugin Name:	IP Allowed List
 Plugin URI:		http://www.fergusweb.net/software/ip-allowed-list/
 Description:	Limits access to the site to people on an allowed list of IP addresses.  If you're not on the list, you only get to see a customisable "Coming Soon" style of page.  To remove protection, simply disable this plugin.
-Version:		1.01
+Version:		1.1
 Author:			Anthony Ferguson
 Author URI:		http://www.fergusweb.net
 */
