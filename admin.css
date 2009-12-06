@@ -1,0 +1,31 @@
+.cb { clear:both; height:1px; line-height:1px; font-size:1px; }
+.ui-tabs-nav, .ui-tabs-panel { }
+.ui-tabs-nav { list-style:none; margin:0; padding:0 0 0 5px; }
+.ui-tabs-nav:after { display:block; clear:both; content:" "; }
+.ui-tabs-nav li { float:left; margin:0 0 0 1px; min-width:80px; }
+.ui-tabs-nav li a { display:block; padding:3px 10px; background:#EEE; border:1px solid #CCC; border-bottom:none; text-decoration:none;
+					-moz-border-radius-topright:5px; -moz-border-radius-topleft:5px; -webkit-border-top-right-radius:5px; -webkit-border-top-left-radius:5px; }
+.ui-tabs-nav .ui-tabs-selected a { padding-bottom:4px; background:#FFF; cursor:default; }
+.ui-tabs-nav li a { }
+.ui-tabs-panel { background:#FFF; border:1px solid #CCC; padding:5px 15px; margin-top:-1px; }
+
+.wlist .save { clear:both; padding:15px 0 15px 180px; }
+#wlistSettings fieldset { border:1px solid #DDD; width:400px; float:left; margin:5px 15px; padding:5px 10px; }
+#wlistSettings fieldset legend { margin:0 10px; padding:2px 5px; font-weight:bold; }
+#wlistSettings fieldset { }
+
+p.privacy { font-size:0.8em; margin:0; padding:0; float:right; }
+fieldset p { margin:3px 0; padding:0; clear:both; }
+fieldset p label { float:left; width:100px; display:block; padding-top:4px; }
+fieldset div.notes { background:#F9F9F9; border:1px solid #DDD; padding:2px 5px; margin-top:15px; }
+fieldset#curSettings div.save { padding:5px 10px; text-align:center; }
+
+fieldset#curList input.tick { float:left; margin:3px 10px 0 0; }
+fieldset#curList label { width:auto; float:none; }
+fieldset#curList label.add { float:right; color:#21759B; }
+fieldset#curList label.rem { float:left; color:#21759B; }
+fieldset#curList label.add input, fieldset#curList label.rem input { float:left; margin:-3px 5px 0 0; }
+fieldset#curList ul { clear:both; padding-top:10px; }
+
+form.wlistContent { padding:30px 10px; }
+form.wlistContent iframe { height:30em !important; width:99% !important; }
